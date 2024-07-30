@@ -5,7 +5,8 @@ import profile from "../profile/profile.jpg"
 const About = () => {
     return (
         <div className="container px-4 mx-auto">
-            <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
+            <div
+                className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
                 <div className="lg:px-4 lg:mt-12 ">
                     <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
                         Hi, I&apos;m Mark Carlo V. Garjas,
@@ -24,7 +25,7 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10">
+                <div className="flex justify-center items-center lg:mt-12 lg:px-4 mb-10">
                     <Image
                         src={profile}
                         alt="Profile"
