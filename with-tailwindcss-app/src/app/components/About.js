@@ -8,19 +8,19 @@ const About = () => {
             <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
                 <div className="lg:px-4 lg:mt-12 ">
                     <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
-                        Hi, Im Mark Carlo V. Garjas,
+                        Hi, I&apos;m Mark Carlo V. Garjas,
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4">
-                            I'm a software engineer, currently working as a Junior Software Engineer at KODA CAMP.
+                            I&apos;m a software engineer, currently working as a Junior Software Engineer at KODA CAMP.
                         </p>
 
                         <p className="mb-4">
-                            I am competent in developing web apps on Ruby on Rails, Javascript, Stimulus, and MySQL.
+                            I&apos;m competent in developing web apps on Ruby on Rails, Javascript, Stimulus, and MySQL.
                         </p>
 
                         <p>
-                            Welcome to my simple page. Hope you feel goods and happy!
+                            Welcome to my simple page. Hope you feel good and happy!
                         </p>
                     </div>
                 </div>

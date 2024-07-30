@@ -17,6 +17,7 @@ const Footer = () => {
                     <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
                         {socialMediaDetails.map((socialMedia) => (
                             <a
+                                key={socialMedia.name}
                                 href={socialMedia.href}
                                 className={"transition-colors hover:text-yellow-500"}
                                 target="_blank"
