@@ -1,15 +1,35 @@
-import React from "react";
+'use client'
+
+import React, { useEffect, useRef } from 'react';
 import Image from "next/image";
 import profile from "../profile/profile.jpg";
+import Typed from 'typed.js';
 
 const About = () => {
+    const typedElement = useRef(null);
+
+    useEffect(() => {
+        if (typedElement.current) {
+            const typed = new Typed(typedElement.current, {
+                strings: ['Mark Carlo V. Garjas', '24 years old'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true
+            });
+
+            return () => {
+                typed.destroy();
+            };
+        }
+    }, []);
+
     return (
         <div className="container px-4 mx-auto py-12">
             <div className="lg:space-x-5 lg:flex lg:flex-row items-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
                 <div className="lg:px-4 lg:mt-12 animate-fadeIn">
-                    <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
-                        Hi, I&apos;m Mark Carlo V. Garjas,
-                    </h1>
+                    <h2 className="text-2xl font-bold text-gray-900 lg:text-4xl dark:text-white">
+                        Hi, I&apos;m <span ref={typedElement}></span>
+                    </h2>
                     <div className="mt-6 text-gray-800 dark:text-white prose dark:prose-dark">
                         <p className="mb-4">
                             a Junior Software Engineer at KODA CAMP. I specialize in developing
@@ -30,16 +50,25 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex justify-center items-center lg:mt-12 lg:px-4 mb-10 animate-fadeIn">
+                <div className="flex flex-col justify-center items-center lg:mt-12 lg:px-4 mb-10 animate-fadeIn">
                     <Image
                         src={profile}
                         alt="Profile"
                         priority={true}
-                        className="rounded-full shadow-lg"
+                        className="rounded-full shadow-lg border-4 border-blue-500"
                         width={250}
                         height={250}
                         placeholder="blur"
                     />
+                    <a
+                        key='Send a message'
+                        href='https://mail.google.com/mail/u/0/?fs=1&to=markcarlo859@gmail.com.com&bcc=markcarlo859@gmail.com&tf=cm'
+                        className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full transition-colors hover:bg-blue-600"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Get in touch
+                    </a>
                 </div>
             </div>
         </div>
