@@ -23,6 +23,13 @@ const About = () => {
         }
     }, []);
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        const link = document.getElementById('contactLink');
+        link.style.display = 'none';
+        window.location.href = 'https://mail.google.com/mail/u/0/?fs=1&to=markcarlo859@gmail.com.com&bcc=markcarlo859@gmail.com&tf=cm';
+    };
+
     return (
         <div className="container px-4 mx-auto py-12">
             <div className="lg:space-x-5 lg:flex lg:flex-row items-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
@@ -61,13 +68,14 @@ const About = () => {
                         placeholder="blur"
                     />
                     <a
-                        key='Send a message'
-                        href='https://mail.google.com/mail/u/0/?fs=1&to=markcarlo859@gmail.com.com&bcc=markcarlo859@gmail.com&tf=cm'
+                        id="contactLink"
+                        href="get-in-touch"
                         className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full transition-colors hover:bg-blue-600"
+                        onClick={handleClick}
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Get in touch
+                        Get in Touch
                     </a>
                 </div>
             </div>
