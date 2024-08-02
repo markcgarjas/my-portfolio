@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: 'class', // or 'media' if you prefer
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },

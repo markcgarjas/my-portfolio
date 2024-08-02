@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from "next/image";
 import profile from "../profile/profile.jpg";
 import Typed from 'typed.js';
+import AboutDetail from "@/app/components/AboutDetail";
 
 const About = () => {
     const typedElement = useRef(null);
@@ -79,6 +80,7 @@ const About = () => {
                     </a>
                 </div>
             </div>
+            <AboutDetail/>
         </div>
     );
 };
